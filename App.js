@@ -1,26 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet } from "react-native";
 
-import Title from "./src/components/title"
-import Form from "./src/components/form"
-import ViewBoxesWithColorAndText from "./src/components/view"
+import FormLogin from "./src/components/login-form";
+import Title from "./src/components/title";
+
+const image = require("./src/assets/background_image.jpg");
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Title/>
-      {/* <ViewBoxesWithColorAndText/> */}
-      <Form/>
-      
-    </View>
+    <ImageBackground source={image} style={styles.images}>
+        <Title/>
+        <FormLogin/>
+    </ImageBackground>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1, //100% of screen
-    backgroundColor: '#e0e5e5e',
-    paddingTop:80,
+  
+  images: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    top: 0,
+    bottom: 0,
+    width: '100%',
+    height: '100%',
   },
 });
-

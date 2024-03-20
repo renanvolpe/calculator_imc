@@ -1,6 +1,6 @@
-import React,{useState} from "react";
-import {View, Text, TextInput, TouchableOpacity, Vibration, Keyboard, Pressable, FlatList } from "react-native"
-import ResultIMC from './ResultImc/'
+import React, { useState } from "react";
+import { FlatList, Text, TextInput, TouchableOpacity, Vibration, View } from "react-native";
+import ResultIMC from './ResultImc/';
 import styles from "./style";
 
 
@@ -100,7 +100,8 @@ export default function Form(){
                         </Text>
                     </View>
                 )
-            }} keyExtractor={(item) =>{item.id}}>
+            }} 
+            keyExtractor={(item) =>{item.id}}>
             </FlatList>
         </View>
     );
