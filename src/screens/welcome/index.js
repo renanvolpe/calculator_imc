@@ -21,7 +21,10 @@ export default function WelcomeScreen({ navigation }) {
           Monitore, organize seus gastos de qualquer lugar
         </Text>
         <Text style={styles.text}>Faça o login para começar</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Login")}
+        >
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
       </View>
